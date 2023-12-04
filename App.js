@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
 
 export default function App() {
   const [titleText,setTitleText]=useState("Hello world");
@@ -12,8 +12,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.headerText} onPress={onPressChange}>{titleText}</Text>
-      <Text style={styles.subtext}>Another piece of text components</Text>
+      <Text style={styles.subtext} >Another piece of text components</Text>
+      <Text accessibilityHint='International Money Factory'>I.M.F.</Text>
       <StatusBar style="auto" />
+      <Button title='tap me'/>
     </View>
   );
 }
